@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <!-- Application logo -->
+            <span class="navbar-brand" th:text="#{app.title}">{AppTitle}</span>
+            <!-- Toggler button -->
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#togglerContent"
+                    aria-controls="togglerContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="togglerContent">
+                <div class="navbar-nav ml-auto">
+                    <!-- New Contact button -->
+                    <a th:href="@{/new}" class="btn btn-info" role="button">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </a>
+                </div> <!-- .navbar-nav -->
+            </div> <!-- .navbar-collapse -->
+        </div> <!-- .container -->
+    </nav>
+</body>
+</html>

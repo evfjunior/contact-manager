@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/head_fragment :: head">...</div>
+<body>
+    <header>
+        <!-- Navbar -->
+        <div th:replace="fragments/navbar_fragment :: nav"></div>
+    </header>
+
+    <main class="container">
+        <h5 class="text-center"
+            th:text="#{title.details}">
+            {DetailsTitle}
+        </h5>
+        <br>
+
+        <div class="box-center">
+            <!-- Contact Details Card -->
+            <div th:insert="fragments/details_fragment :: details"></div>
+        </div>
+    </main>
+
+    <!-- jQuery, Popper and Bootstrap JS -->
+    <div th:insert="fragments/scripts_fragment :: scripts"></div>
+</body>
+</html>
