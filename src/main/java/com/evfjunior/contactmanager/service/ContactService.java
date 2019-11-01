@@ -31,4 +31,8 @@ public class ContactService {
     public Contact findById(String id) {
         return repository.findById(id).get();
     }
+
+    public void save(Contact contact) {
+        repository.save(contact);
+    }
 }
