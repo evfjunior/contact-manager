@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Spring Boot</title>
-</head>
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<!-- Head -->
+<div th:replace="fragments/head_fragment :: head">...</div>
 <body>
-    <div align="center">
-        Spring Boot Test
-    </div>
+    <header>
+
+    </header>
+
+    <main class="container">
+        <h5>Bootstrap Test</h5>
+    </main>
+
+    <!-- jQuery, Popper, Bootstrap and Fade-in effect -->
+    <div th:insert="fragments/scripts_fragment :: scripts"></div>
 </body>
 </html>
