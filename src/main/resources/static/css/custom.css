@@ -1,0 +1,68 @@
+/* Custom CSS */
+
+/* Tags */
+body {
+    background-color: #EEEEEE;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-top: 80px;
+
+    /* Fade effect */
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Classes */
+.box-center {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 760px;
+}
+
+.details-box {
+    background-color: #FAFAFA;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+}
+
+.details-icon {
+    background-color: #FAFAFA;
+    display: inline-block;
+    padding: 10px;
+}
+
+a.contact-row {
+    color: inherit;
+}
+
+a.contact-row:hover {
+    color: inherit;
+    background-color: #EEEEEE;
+    text-decoration: none;
+}
+
+.contact-row {
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    display: block;
+    padding: 8px;
+    width: 100%;
+}
+
+.main-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 130%;
+}
