@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <!-- Cancel Add Modal -->
+    <div th:fragment="cancel-add-confirmation"
+         class="modal fade" id="cancelAdd"
+         tabindex="-1" role="dialog"
+         aria-labelledby="cancelAddTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelAddTitle"
+                        th:text="#{modal.cancelTitle}">
+                        {CancelTitle}
+                    </h5>
+                    <!-- Close Icon -->
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div> <!-- .modal-header -->
+                <div class="modal-body">
+                    <span th:text="#{modal.cancelAddText}">
+                        {CancelText}
+                    </span>
+                </div> <!-- .modal-body -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                            data-dismiss="modal">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    <a th:href="@{/}" type="button" class="btn btn-info">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </a>
+                </div> <!-- .modal-footer -->
+            </div> <!-- .modal-content -->
+        </div> <!-- .modal-dialog -->
+    </div> <!-- .delete-confirmation -->
+
+    <!-- Cancel Edit Modal -->
+    <div th:fragment="cancel-edit-confirmation"
+         class="modal fade" id="cancelEdit"
+         tabindex="-1" role="dialog"
+         aria-labelledby="cancelEditTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelEditTitle"
+                        th:text="#{modal.cancelTitle}">
+                        {CancelTitle}
+                    </h5>
+                    <!-- Close Icon -->
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div> <!-- .modal-header -->
+                <div class="modal-body">
+                    <span th:text="#{modal.cancelEditText}">
+                        {CancelText}
+                    </span>
+                </div> <!-- .modal-body -->
+                <div class="modal-footer">
+                    <!-- Cancel Button -->
+                    <button type="button" class="btn btn-secondary"
+                            data-dismiss="modal">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    <!-- Confirm Button -->
+                    <a th:href="@{/}" type="button" class="btn btn-info">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </a>
+                </div> <!-- .modal-footer -->
+            </div> <!-- .modal-content -->
+        </div> <!-- .modal-dialog -->
+    </div> <!-- .delete-confirmation -->
+
+    <!-- Delete Confirmation Modal -->
+    <div th:fragment="delete-confirmation"
+         class="modal fade" id="deleteConfirmationModal"
+         tabindex="-1" role="dialog"
+         aria-labelledby="deleteConfirmationModalTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"
+                        id="deleteConfirmationModalTitle"
+                        th:text="#{modal.deleteTitle}">
+                        {DeleteModalTitle}?
+                    </h5>
+                    <!-- Close Icon -->
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Cancel">
+                        <span aria-hidden="true">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div> <!-- .modal-header -->
+                <div class="modal-body">
+                    <p th:text="#{modal.deleteText} + ' ' + ${contact.firstName} + '?'">
+                        {DeleteText}+{ContactName}?</p>
+                </div> <!-- .modal-body -->
+                <div class="modal-footer">
+                    <!-- Cancel Button -->
+                    <button type="button" class="btn btn-secondary"
+                            data-dismiss="modal">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    <!-- Confirm Button -->
+                    <a th:href="@{'/delete=' + ${contact.id}}"
+                       id="delete" class="btn btn-danger" role="button">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </a>
+                </div> <!-- .modal-footer -->
+            </div> <!-- .modal-content -->
+        </div> <!-- .modal-dialog -->
+    </div> <!-- .delete-confirmation -->
+</body>
+</html>

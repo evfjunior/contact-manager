@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <form action="#" method="post"
+          th:action="@{/update}"
+          th:object="${contact}">
+        <div class="form-group">
+            <!-- ID (hidden) -->
+            <label for="inputId"></label>
+            <input type="text" class="form-control"
+                   id="inputId"
+                   th:field="*{id}"
+                   placeholder="ID"
+                   hidden>
+            <!-- First Name -->
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control"
+                   id="inputFirstName"
+                   th:field="*{firstName}"
+                   th:placeholder="#{label.firstName}"
+                   required>
+            <!-- Last Name -->
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control"
+                   id="inputLastName"
+                   th:field="*{lastName}"
+                   th:placeholder="#{label.lastName}">
+            <!-- Phone Number -->
+            <label for="inputPhoneNumber"></label>
+            <input type="tel" class="form-control"
+                   id="inputPhoneNumber"
+                   th:field="*{phone}"
+                   th:placeholder="#{label.phone}">
+            <!-- Email Address -->
+            <label for="inputEmailAddress"></label>
+            <input type="email" class="form-control"
+                   id="inputEmailAddress"
+                   th:field="*{email}"
+                   placeholder="Email">
+        </div>
+
+        <!-- Buttons -->
+        <!-- Back/cancel (triggers modal) -->
+        <button type="button" class="btn btn-secondary"
+                data-toggle="modal" data-target="#cancelEdit">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <!-- Submit/save -->
+        <button type="submit" id="submitContact" class="btn btn-info">
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+
+        <!-- Cancel Edit Modal -->
+        <span th:insert="fragments/modals_fragment :: cancel-edit-confirmation"></span>
+    </form>
+
+</body>
+</html>

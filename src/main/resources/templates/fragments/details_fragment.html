@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="details">
+        <div class="card">
+            <div class="card-header text-light bg-info">
+                <h5 class="card-title"
+                    th:text="${contact.firstName} + ' ' + ${contact.lastName}">
+                    {FullName}
+                </h5>
+            </div> <!-- .card-header -->
+            <div class="card-body">
+                <div class="details-box">
+                    <!-- Phone -->
+                    <div class="details-icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <span th:text="${contact.phone}"></span>
+                </div> <!-- details-box -->
+                <!-- Email -->
+                <div class="details-box">
+                    <div class="details-icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <span th:text="${contact.email}"></span>
+                </div> <!-- details-box -->
+            </div> <!-- .card-body -->
+        </div> <!-- .card -->
+        <br>
+
+        <!-- Buttons -->
+        <!-- Back/cancel -->
+        <a th:href="@{/}" id="back"
+           class="btn btn-secondary" role="button">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <!-- Edit -->
+        <a th:href="@{'/edit=' + ${contact.id}}"
+           id="edit" class="btn btn-info" role="button">
+            <i class="fa fa-edit" aria-hidden="true"></i>
+        </a>
+        <!-- Delete (triggers modal) -->
+        <button type="button" class="btn btn-danger"
+                data-toggle="modal" data-target="#deleteConfirmationModal">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+
+        <!-- Delete Confirmation Modal -->
+        <span th:insert="fragments/modals_fragment :: delete-confirmation"></span>
+    </div>
+</body>
+</html>

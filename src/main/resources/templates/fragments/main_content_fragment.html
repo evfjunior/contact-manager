@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="main-content" class="main-content">
+        <a class="contact-row" role="button"
+           th:each="contact : ${contacts}"
+           th:href="@{'/details=' + ${contact.id}}">
+            <div th:text="${contact.firstName} + ' ' + ${contact.lastName}">
+                {FullName}
+            </div>
+        </a>
+    </div>
+</body>
+</html>

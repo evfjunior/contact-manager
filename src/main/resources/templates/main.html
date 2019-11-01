@@ -4,11 +4,19 @@
 <div th:replace="fragments/head_fragment :: head">...</div>
 <body>
     <header>
-
+        <!-- Navbar -->
+        <div th:replace="fragments/navbar_fragment :: nav"></div>
     </header>
 
     <main class="container">
-        <h5>Bootstrap Test</h5>
+        <!-- Main content - Contacts List -->
+        <h5 class="text-center"
+            th:text="#{title.list}">
+            {MainTitle}
+        </h5>
+        <br>
+
+        <div th:replace="fragments/main_content_fragment :: main-content"></div>
     </main>
 
     <!-- jQuery, Popper, Bootstrap and Fade-in effect -->
