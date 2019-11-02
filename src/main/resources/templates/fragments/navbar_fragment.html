@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us" xmlns:th="http://www.thymeleaf.org">
 <body>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <nav th:fragment="main-nav" id="main-nav"
+         class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
         <div class="container">
             <!-- Application logo -->
             <span class="navbar-brand" th:text="#{app.title}">{AppTitle}</span>
@@ -21,6 +22,14 @@
                     </a>
                 </div> <!-- .navbar-nav -->
             </div> <!-- .navbar-collapse -->
+        </div> <!-- .container -->
+    </nav>
+
+    <nav id="secondary-nav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <!-- Application logo -->
+            <span class="navbar-brand" th:text="#{app.title}">{AppTitle}</span>
+            <!-- Toggler button -->
         </div> <!-- .container -->
     </nav>
 </body>
