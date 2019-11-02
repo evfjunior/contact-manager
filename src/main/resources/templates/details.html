@@ -2,6 +2,9 @@
 <html lang="en-us" xmlns:th="http://www.thymeleaf.org">
 <div th:replace="fragments/head_fragment :: head">...</div>
 <body>
+    <!-- Fade effect (needs to be inline to avoid screen flickering) -->
+    <script>document.body.className += 'fade-out';</script>
+
     <header>
         <!-- Navbar -->
         <div th:replace="fragments/navbar_fragment :: nav"></div>
@@ -20,7 +23,7 @@
         </div>
     </main>
 
-    <!-- jQuery, Popper and Bootstrap JS -->
+    <!-- Javascript -->
     <div th:insert="fragments/scripts_fragment :: scripts"></div>
 </body>
 </html>

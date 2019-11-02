@@ -10,7 +10,7 @@ body {
 
     /* Fade effect */
     opacity: 1;
-    transition: 1s opacity;
+    transition: 1.5s opacity;
 }
 
 body.fade-out {
