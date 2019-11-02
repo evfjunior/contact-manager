@@ -31,7 +31,13 @@
                    th:field="*{email}"
                    placeholder="Email"
                    maxlength="50">
-        </div>
+            <!-- Birthday -->
+            <label for="inputBirthday"></label>
+            <input type="date" class="form-control"
+                   id="inputBirthday"
+                   th:field="*{birthday}"
+                   th:placeholder="#{label.birthday}">
+        </div> <!-- .form-group -->
 
         <!-- Buttons -->
         <!-- Back/cancel (triggers modal) -->

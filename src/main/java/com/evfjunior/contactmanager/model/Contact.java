@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
 
 @AllArgsConstructor
 @Entity
@@ -18,6 +19,7 @@ public class Contact {
     @Id
     private String id;
 
+    private Date birthday;
     private String email;
     private String firstName;
     private String lastName;
