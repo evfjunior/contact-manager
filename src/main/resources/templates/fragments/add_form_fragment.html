@@ -9,25 +9,28 @@
                    id="inputFirstName"
                    th:field="*{firstName}"
                    th:placeholder="#{label.firstName}"
-                   required>
+                   maxlength="15" required>
             <!-- Last Name -->
             <label for="inputLastName"></label>
             <input type="text" class="form-control"
                    id="inputLastName"
                    th:field="*{lastName}"
-                   th:placeholder="#{label.lastName}">
+                   th:placeholder="#{label.lastName}"
+                   maxlength="15">
             <!-- Phone Number -->
             <label for="inputPhoneNumber"></label>
             <input type="tel" class="form-control"
                    id="inputPhoneNumber"
                    th:field="*{phone}"
-                   th:placeholder="#{label.phone}">
+                   th:placeholder="#{label.phone}"
+                   maxlength="20">
             <!-- Email Address -->
             <label for="inputEmailAddress"></label>
             <input type="email" class="form-control"
                    id="inputEmailAddress"
                    th:field="*{email}"
-                   placeholder="Email">
+                   placeholder="Email"
+                   maxlength="50">
         </div>
 
         <!-- Buttons -->
