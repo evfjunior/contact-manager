@@ -66,3 +66,37 @@ a.contact-row:hover {
 .navbar-brand {
     font-size: 130%;
 }
+
+.overlay {
+    background: rgba(0, 0, 0, .7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.spinner {
+    animation: spin 1s infinite linear;
+    border: 3px solid #EEEEEE;
+    border-radius: 100%;
+    border-top: 5px solid #0097A7;
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+}
+
+/* Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}

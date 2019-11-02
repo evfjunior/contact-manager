@@ -3,6 +3,11 @@
 <!-- Head -->
 <div th:replace="fragments/head_fragment :: head">...</div>
 <body>
+    <!-- Preloader -->
+    <div id="overlay" class="overlay">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <!-- Navbar -->
         <div th:replace="fragments/navbar_fragment :: main-nav"></div>
@@ -19,7 +24,7 @@
         <div th:replace="fragments/main_content_fragment :: main-content"></div>
     </main>
 
-    <!-- jQuery, Popper, Bootstrap and Fade-in effect -->
+    <!-- jQuery, Popper, Bootstrap and Preloader -->
     <div th:insert="fragments/scripts_fragment :: scripts"></div>
 </body>
 </html>
